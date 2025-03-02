@@ -1,6 +1,7 @@
-module.exports = {
-  plugins: {
-    tailwindcss: {},
-    autoprefixer: {},
-  },
-}
+// module.exports = {
+//   plugins: {
+//     'postcss-cascade-layers': {},
+//     tailwindcss: {},
+//     autoprefixer: {},
+//   },
+// };

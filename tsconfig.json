@@ -22,10 +22,13 @@
         "name": "next"
       }
     ],
-    "baseUrl": ".",  // Set the base URL for relative imports
+    "baseUrl": ".", // Set the base URL for relative imports
     "paths": {
-      "@/*": ["./*"]  // Set up the alias '@' to point to the root of the project
-    }
+      "@/*": [
+        "./*"
+      ] // Set up the alias '@' to point to the root of the project
+    },
+    "target": "ES2017"
   },
   "include": [
     "next-env.d.ts",
