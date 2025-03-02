@@ -125,3 +125,5 @@ Here are some of the important tailwind css classes that helps in responsive web
 👍🎉 First off, thanks for taking the time to contribute! 🎉👍
 - You can log any defects or suggestions as GitHub issues [here](https://github.com/mahima-manik/nextjs-tailwind-responsive-starter-code/issues). 
 - To contribute code, fork this project and submit a pull request with your changes and add a brief description of your contribution.
+#   D o s a W e b - S o l u t i o n s  
+ 
