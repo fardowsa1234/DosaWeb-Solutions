@@ -70,7 +70,7 @@ export default function Contact() {
       console.log("Form submitted:", values)
       toast({
         title: "Message sent!",
-        description: "Thank you for contacting us. We'll get back to you soon.",
+        description: "Thank you for contacting us. We&apos;ll get back to you soon.",
       })
       form.reset()
     } catch (error) {
@@ -99,8 +99,8 @@ export default function Contact() {
           className="max-w-3xl mx-auto text-center mb-16"
         >
           <span className="text-black font-semibold text-lg mb-4 block">Get in Touch</span>
-          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">Let's Create Something Amazing Together</h2>
-          <p className="text-xl text-gray-600">Ready to transform your digital presence? We'd love to hear from you!</p>
+          <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">Let&apos;s Create Something Amazing Together</h2>
+          <p className="text-xl text-gray-600">Ready to transform your digital presence? We&apos;d love to hear from you!</p>
         </motion.div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-start">
@@ -223,4 +223,3 @@ export default function Contact() {
     </section>
   )
 }
-

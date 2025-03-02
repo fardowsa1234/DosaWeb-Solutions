@@ -51,7 +51,7 @@ export default function Portfolio() {
         >
           <span className="text-black font-semibold text-lg mb-4 block">Featured Work</span>
           <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">Our Portfolio</h2>
-          <p className="text-xl text-gray-600">Discover how we've helped businesses transform their digital presence</p>
+          <p className="text-xl text-gray-600">Discover how we&apos;ve helped businesses transform their digital presence</p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-8">
@@ -109,7 +109,7 @@ export default function Portfolio() {
             <CardContent className="space-y-6">
               <h3 className="text-3xl font-bold">Ready to Start Your Project?</h3>
               <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-                Let's collaborate to bring your digital vision to life
+                Let&apos;s collaborate to bring your digital vision to life
               </p>
               <Button
                 variant="outline"
@@ -126,4 +126,3 @@ export default function Portfolio() {
     </section>
   )
 }
-

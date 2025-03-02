@@ -10,7 +10,7 @@ const features = [
   {
     icon: Code,
     title: "Innovative Solutions",
-    description: "We craft cutting-edge digital solutions that push the boundaries of what's possible online.",
+    description: "We craft cutting-edge digital solutions that push the boundaries of what&apos;s possible online.",
   },
   {
     icon: Heart,
@@ -21,7 +21,7 @@ const features = [
   {
     icon: Trophy,
     title: "Proven Success",
-    description: "With countless successful projects, we've helped businesses achieve their digital dreams.",
+    description: "With countless successful projects, we&apos;ve helped businesses achieve their digital dreams.",
   },
 ]
 
@@ -63,17 +63,14 @@ export default function About() {
             <br />
             Their mission? To help businesses create a strong online presence and drive growth through cutting-edge
             solutions in web development, SEO, social media management, and branding. With a focus on collaboration,
-            creativity, and results, DosaWeb Solutions is more than a company—it's a partnership driven by passion and a
+            creativity, and results, DosaWeb Solutions is more than a company—it&apos;s a partnership driven by passion and a
             vision for the future.
             <br />
             <br />
-            Let's build something amazing together.
+            Let&apos;s build something amazing together.
           </p>
           <div className="grid md:grid-cols-3 gap-8 mt-12">
-            {[
-              { number: 100, label: "Projects Delivered" },
-              { number: 50, label: "Happy Clients" },
-            ].map((stat, index) => (
+            {[{ number: 100, label: "Projects Delivered" }, { number: 50, label: "Happy Clients" }].map((stat, index) => (
               <motion.div
                 key={index}
                 initial={{ opacity: 0, y: 20 }}
@@ -122,7 +119,7 @@ export default function About() {
         >
           <h2 className="text-3xl md:text-4xl text-blue-600 font-bold mb-4">Meet Our Founders</h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            The creative minds and technical experts behind DosaWeb's success
+            The creative minds and technical experts behind DosaWeb&apos;s success
           </p>
         </motion.div>
 
@@ -158,4 +155,3 @@ export default function About() {
     </section>
   )
 }
-

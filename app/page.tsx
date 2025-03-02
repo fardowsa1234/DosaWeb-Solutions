@@ -27,7 +27,7 @@ const features = [
   {
     icon: Code,
     title: "Innovative Solutions",
-    description: "We craft cutting-edge digital solutions that push the boundaries of what's possible online.",
+    description: "We craft cutting-edge digital solutions that push the boundaries of what&apos;s possible online.",
   },
   {
     icon: Heart,
@@ -38,7 +38,7 @@ const features = [
   {
     icon: Trophy,
     title: "Proven Success",
-    description: "With countless successful projects, we've helped businesses achieve their digital dreams.",
+    description: "With countless successful projects, we&apos;ve helped businesses achieve their digital dreams.",
   },
 ]
 
@@ -207,10 +207,7 @@ export default function Home() {
               transition={{ duration: 0.5, delay: 0.8 }}
               className="grid grid-cols-2 md:grid-cols-3 gap-8 mt-20"
             >
-              {[
-                { number: 100, label: "Projects Completed" },
-                { number: 50, label: "Happy Clients" },
-              ].map((stat, index) => (
+              {[{ number: 100, label: "Projects Completed" }, { number: 50, label: "Happy Clients" }].map((stat, index) => (
                 <div key={index} className="text-center">
                   <div className="text-3xl md:text-4xl font-bold text-white mb-2">
                     {statsInView ? <CountUp start={0} end={stat.number} duration={2} suffix="+" /> : "0"}
@@ -334,7 +331,7 @@ export default function Home() {
             <span className="text-black font-semibold text-lg mb-4 block">Featured Work</span>
             <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">Our Portfolio</h2>
             <p className="text-xl text-gray-600">
-              Discover how we've helped businesses transform their digital presence
+              Discover how we&apos;ve helped businesses transform their digital presence
             </p>
           </motion.div>
 
@@ -347,36 +344,24 @@ export default function Home() {
                 transition={{ duration: 0.5, delay: index * 0.2 }}
                 viewport={{ once: true }}
               >
-                <Card className="overflow-hidden group">
-                  <CardContent className="p-0">
-                    <AspectRatio ratio={16 / 9}>
-                      <div className="relative h-full">
-                        <Image
-                          src={project.image || "/placeholder.svg"}
-                          alt={project.title}
-                          fill
-                          className="object-cover transition-transform duration-500 group-hover:scale-110"
-                        />
-                        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                        <div className="absolute inset-0 p-6 flex flex-col justify-end text-white transform translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
-                          <p className="text-sm font-medium text-white mb-2">{project.category}</p>
-                          <h3 className="text-2xl font-bold text-blue-600 mb-2">{project.title}</h3>
-                          <p className="text-sm text-gray-300 mb-4">{project.description}</p>
-                          <Button
-                            variant="outline"
-                            className="self-start border-white bg-transparent text-white hover:bg-white hover:text-blue-600"
-                            asChild
-                          >
-                            <a href={project.link} target="_blank" rel="noopener noreferrer">
-                              View Project
-                              <ExternalLink className="ml-2 h-4 w-4" />
-                            </a>
-                          </Button>
-                        </div>
-                      </div>
-                    </AspectRatio>
-                  </CardContent>
-                </Card>
+                <AspectRatio ratio={16 / 9} className="rounded-lg overflow-hidden mb-6">
+                  <Image
+                    src={project.image}
+                    alt={project.title}
+                    layout="fill"
+                    objectFit="cover"
+                    className="object-cover"
+                  />
+                </AspectRatio>
+                <h3 className="text-2xl font-semibold text-blue-600 mb-4">{project.title}</h3>
+                <p className="text-gray-600">{project.category}</p>
+                <p className="text-gray-600 mb-4">{project.description}</p>
+                <Button asChild size="sm" className="w-full">
+                  <Link href={project.link} target="_blank">
+                    View Project
+                    <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </Button>
               </motion.div>
             ))}
           </div>
@@ -384,63 +369,13 @@ export default function Home() {
           <div className="text-center mt-12">
             <Button asChild variant="outline">
               <Link href="/portfolio">
-                View All Projects
+                View More Projects
                 <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>
         </div>
       </section>
-
-      {/* Contact Section */}
-      <section id="contact" className="py-24 bg-gray-50">
-        <div className="container mx-auto px-4">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto text-center mb-16"
-          >
-            <span className="text-black font-semibold text-lg mb-4 block">Get in Touch</span>
-            <h2 className="text-4xl md:text-5xl font-bold text-blue-600 mb-6">
-              Let's Create Something Amazing Together
-            </h2>
-            <p className="text-xl text-gray-600 mb-8">
-              Ready to transform your digital presence? We'd love to hear from you!
-            </p>
-            <Button asChild size="lg">
-              <Link href="/contact">
-                Contact Us Now
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Link>
-            </Button>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
-            viewport={{ once: true }}
-            className="text-center"
-          >
-            <div className="p-12 bg-gradient-to-r from-purple-600 to-blue-600 rounded-2xl">
-              <div className="inline-flex items-center gap-2 mb-6 bg-white/10 px-4 py-2 rounded-full">
-                <Sparkles className="h-5 w-5 text-yellow-300" />
-                <span className="text-white font-medium">Why Choose Our Package?</span>
-              </div>
-              <h3 className="text-3xl font-bold text-white mb-4">Transform Your Digital Presence Today</h3>
-              <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-                Get everything you need to grow your business online with our affordable and flexible pricing options
-              </p>
-              <Button variant="outline" size="lg" className="bg-white text-blue-600 hover:bg-blue-50" asChild>
-                <Link href="/contact">Get Started Now</Link>
-              </Button>
-            </div>
-          </motion.div>
-        </div>
-      </section>
     </>
   )
 }
-
