@@ -144,7 +144,7 @@ export default function Home() {
       <section className="relative min-h-screen flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/portfolio5.jpeg"
+            src="/hero.png"
             alt="Hero Background"
             fill
             priority

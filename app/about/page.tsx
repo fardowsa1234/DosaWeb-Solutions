@@ -32,7 +32,7 @@ const teamMembers = [
     image: "/founder1.jpeg",
   },
   {
-    name: "Fardosa Abdullahi",
+    name: "Fardowsa Abdullahi",
     role: "Creative Director & Software Engineer",
     image: "/founder2.jpeg",
   },
